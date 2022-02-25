@@ -1,0 +1,759 @@
+=#conditions:
+a=40 
+b=20
+=========
+
+if [ condition ]
+
+fi
+
+if [ a=b ]
+then 
+echo 'a and b are equal'
+elif 
+echo 'a is greater than b'
+else 
+echo 'a is less than b'
+fi 
+
+
+then 
+	echo 'a and b are equal'
+
+=switch cases:
+
+sh option.sh
+sh sonar.sh start|stop|restart 
+
+echo "Please enter the best performances"
+case $1 in 
+1)
+echo 'You the first position'
+echo 'Your entry is valid';; 
+2) 
+echo 'You the second position'
+echo 'Your entry is valid';;
+3) 
+echo 'You the third position'
+echo 'Your entry is valid';;
+*)
+echo 'Sorry Your entry is invalid'
+echo 'The options to enter are: 1, 2 or 3 ';;
+esac 
+
+
+case $1 in 
+1)
+commands;; 
+2) 
+commands ;;
+3) 
+command ;;
+*)
+commands;;
+esac
+case $1 in 
+start) 
+stop) 
+restart) 
+*)
+esac  
+
+Git 
+===
+Develop a mobile banking Java web application
+
+Landmark-Software Solution   Boa/RBC/BB(FinTech)
+==========                   ==================
+
+ boa == 
+  online-banking 
+
+ apple --> smart Phones / IOS 
+ samsung --smart Phones / android
+
+  Samsung Note --> 1  2  3  4  5  6  7  8  9  10  20 
+
+  Git is use for Versioning 
+
+10 year contract:
+Team 13 
+ Developers = 7 
+ DevOps Engineers = 3 
+ DBA = 1 
+ Linux Admin = 1 
+ Scrum Master = 1
+
+SDLC = 
+ Requirements -->  
+ Designing --> High Level Documentation 
+ Implementation --> Developers start coding 
+ Testing -->
+ Deployment -->
+ Maintenance-- Monitoring 
+
+ Year 3 = 
+ Release to the client (RBC/BOA/BC) 
+Versions:
+  version 1 
+
+Developer1- Simon
+   userMGT.java  
+Developer2 -- Percy
+   deploy.sh
+Developer3  --> Elvis
+   test.cases
+
+ Email / test messaging 
+
+Local 
+Simon    Elvis    Percy
+  Centralised Server
+
+online-banking.java 
+Period: 
+  1. Build + Release   client happy
+  2. Build + Release   client happy
+  3. Build + Release   client not-happy 
+
+WE CANNOT REVERT / ROLL-BACK 
+
+Git: Versioning Software (95% plus companies) 
+  --> Distributed Version Control system. DVCS
+  Open source
+  Support Data integrity
+  support ROLL-BACK 
+  Fast 
+  Collaboration is great 
+
+SVN --> Sub Version
+CVS --> Concurrent Version system
+TFS --> Team Foundation Server
+
+Git:
+Source Code Management Platforms = SCM
+        GitHub - MS
+        GitLab
+        BitBucket (Stash) - A
+        Amazon CodeCommit
+
+https://github.com
+  email address 
+  password 
+
+IQ: As a DevOps Engineer, what are your roles & responsilities in Git?
+    Project Onboarding
+       rbc 
+       boa 
+    1. Create organisation when necessary 
+          https://github.com/Landmark-Fintech
+
+    2. Create teams and add members and assign responsilities
+       https://github.com/orgs/Landmark-Fintech/teams/boa-team
+       add users to team and grant required access
+          landmark26 
+          elvisvukesu
+          CyrilGitweb
+          docteura
+          Godpower122
+          derilmbarika
+
+    3. Create repository for each project = 9/10  
+       https://github.com/Landmark-Fintech/rbc 
+       https://github.com/Landmark-Fintech/boa
+
+       https://github.com/Landmark-Fintech/barclays
+
+       private repos:  
+         no one has read or write access
+           Team members can read and/or write if permitted
+
+          404 error --> NOT FOUND  
+
+       Public Repo: 
+         by default everyone has read access
+     only authorise persons can update the code
+    
+        13 = 6 Developers / DE 3 /  
+   create repository and teams for new onboarded projects
+   
+Project: Create an organisation in github
+         Create 3 teams for three projects 
+          BOA / RBC / Barclays()
+        Create repositories for each  project 
+
+
+Community edition   = CE  
+   free version 
+ENTERPRISE edition  = EE 
+   paid = license 
+
+GitHub - CE = free version 
+   https://github.com
+
+GHE    - EE  = paid version 
+    https://ghe.lss.com
+    https://ghe.aa.com
+    https://ghe.rbc.com
+    https://ghe.boa.com
+
+Git Installations
+-----------------
+Pre Requisite Software Download/ Registration :
+  
+  Install git bash @ https://git-scm.com/downloads
+
+==========================
+Installation 
+  Windows OS: 
+    git bash 
+    git --version 
+       git version 2.33.1.windows.1
+
+  Linux = RedHAT 8 
+   Installation of the GIT PACKAGE IN RedHAT 8 Server
+    sudo yum install git
+      git --version
+
+Developers:
+ Local environment/Server/Computer 
+
+mkdir fintech
+ cd fintech; mkdir boa rbc barclays 
+ cd boa 
+   git init --> initialises the git directory/repository
+     .git  
+
+git config --global user.name "Simon Legah"
+git config --global user.email "legah2000@gmail.com"
+
+git config --global --list
+
+git init          = to initialised a git empty repository
+git status        = to track files location
+git add           = move files to staging area from working area
+git commit -m     = move files to the local repository FROM STAGING AREA
+                    good commit message for tracking changes/authors 
+git log = displays commit iD 
+
+git add . 
+git add fileName 
+git add * 
+
+git commit -m "my first commit"
+git commit -m "boa first app release"
+ -m = message 
+
+        working area   staging area   Local-Repo    Remote-Repo  :
+         developement   review         commit         GitHub
+         writing code  
+         local-Computer    LC            LC           
+         file.RED        File.GREEN 
+        git add          git commit      
+
+
+
+git init 
+  creates: git Local-Repo
+
+cat users.java
+ List of users
+ Simon
+ Percy
+ Elvis
+
+db.sql 
+userNames:
+  John
+  Peter
+areas in git:
+  working area = WIP  
+    files are in "red"
+    git add 
+  staging area 
+    files are in "green"
+    git commit -m ""
+  Local-Repo 
+    git push  --> move changes to remote from Local-Repo 
+  Remote-Repo = github
+
+git init :
+  Local-Repo is created
+  master branch is created 
+
+
+git log 
+   shows all commits (Versions)
+
+https://github.com/Landmark-Fintech/boa   
+
+git remote -v
+
+git remote add ba \
+https://github.com/Landmark-Fintech/boa
+
+Create an alias for your Remote-Repo  
+
+git push \
+https://github.com/Landmark-Fintech/boa
+
+git push ba master 
+
+git push AliasName branchName 
+
+Please use a 
+   personal access token instead.
+  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
+
+git show e64a94568c
+
+git show Cid 
+
+Authentication failed:
+
+Move changes from remote-repo to Local-Repo ONLY 
+  git fetch 
+    git fetch AliasName branchName
+    git fetch ba master 
+  git diff 
+  git merge 
+
+  git pull  
+   =move changes from remote to Local-Repo/Working area 
+    git pull AliasName branchName
+    git pull ba master
+
+what is the difference between git fetch and pull 
+
+Github ACCOUNT --> settings --> Developer settings --> pat  
+
+  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
+
+Creating an AliasName:
+  Github-RemoteRepo
+
+  https://github.com/Landmark-Fintech/boa.git
+
+  git remote add ba https://github.com/Landmark-Fintech/boa.git
+
+  git remote -v 
+
+  git push ba master 
+
+  git pull ba master 
+
+  git fetch ba master 
+
+  git init 
+    It create a default branch called master 
+
+  git fetch --> It brings changes in the code to the LocalRepo
+  git pull --> It brings changes in the code to the Working area 
+  git clone --> It brings the entire code to the working area 
+
+    use to merge changes on the RemoteRepo with the localRepo
+
+ROLL-BACK changes:
+  git clean 
+  git clean -n (shows files to be deleted)
+  git clean -f (delete the files)
+     delete code/work in your working area 
+          db-backup.sh  
+          deploy.java 
+  git reset 
+     moves code from staging to working area
+       deploy.java 
+
+  git revert cID = undo / cancels changes in that commit 
+
+  git show 
+
+Line of Development = branch 
+
+In Landmark we maintain a minimum of 3 branches:
+Git branch =
+  development branch 
+  staging branch 
+  master branch 
+
+ development --> staging --> MASTER
+
+Creating a git branch:
+  git branch branchNAME 
+  git branch development 
+  git branch staging
+
+  git checkout branchName = will swtich a branch
+
+  git checkout -b branchName 
+     creates and move into a branch 
+
+ git diff development  
+ git merge development      
+
+Yusuf 
+Mercy 
+Keren 
+
+Have you encounter a merge conflict
+   and how did you reslove it?
+    Manually 
+       1 vi into the affected file and modify
+       run git commit -a -m  
+
+
+ master 
+       to 
+    development 
+       commit 1   c9fcfe7c
+       commit 2   e0cdad6d
+       commit 3 
+ 
+ git diff development 
+
+ git cherry-pick cID
+
+ git cherry-pick e0cdad6d
+
+
+
+IQ: How many environments are you supporting?
+Environment:
+    development branch deploying to Development ENV 
+    testing branch deploys to  Testing ENV
+    testing branch deploys to  UAT(QA, BA)   ENV
+    MASTER branch code are deployed to  Production
+ 
+  Branches are used to create lines of development. 
+  A branch is a line development 
+
+Git Branches -- > Lines of development
+======================================
+    git branch 
+ https://github.com/Landmark-Fintech/td
+
+ td == 
+   -- 
+Organisation
+   url: https://github.com/Landmark-Fintech/
+        https://github.com/Landmark-Fintech
+repository 
+   url: 
+  https://github.com/Landmark-Fintech/td
+  git remote add origin https://github.com/Landmark-Fintech/td.git
+
+mkdir td; 
+cd td
+
+echo  
+
+cat > test.sh 
+
+echo "Welcome to TDBank" >> app.java 
+
+git commit -m "app phase1 done"
+    HEAD -> master 
+    HEAD -> dev 
+    HEAD -> stage 
+
+git commit -m "app ready Deployment" 
+
+git checkout master 
+
+git checkout -b stage 
+
+  dev --> stage --> master (LIVE)
+
+git commit -m "app phase2 ready" 
+  c101f3ac40
+    (HEAD -> master, stage, dev)
+
+Local repo 
+  git push td master 
+  git push td dev 
+  git push td stage 
+
+  git push td --all 
+
+  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
+
+dev --> stage --> master (100k)-- > CI/CD 
+                      bug_fix_0142 
+                         100k + 2k - 1k)
+                         review | pull request | great job /ok
+                      hot_fix-01245
+                         review | pull request | great job /ok
+                      feature_0143 (100k + 2k )
+                         review | pull request | great job /ok
+
+  pull request:
+  allows team members to review changes 
+     before committing to the master branch
+
+  dev --> stage --> master 
+git tag:
+====tag
+difference b/w tags and branches :
+=== Tags                     ==Branch
+immutable                    mutable (modifiable)
+unmodifiable                 modifiable
+After Production             development-WIP 
+Master Recommended           any branch
+
+git tag TagName                 git branch BN       
+git push AliasName tag TN       git push an branchName  
+
+git tag -d TN                   git branch -d BN
+
+git push an --tags              git push an --all 
+
+ git tag td-v-1.0.0 
+  version = v-1.0.2
+      1 = major version 
+      0 = minor version 
+      2 = patch 
+
+   git push td tag tdBank24-v1.0.2
+
+https://github.com/Landmark-Fintech/td/archive/refs/tags/td-v-1.0.0.tar.gz
+
+https://github.com/Landmark-Fintech/td/archive/refs/tags/td-v-1.0.0.zip
+
+
+ Explain your branching strategy in LandmakTechnology?? 
+ 
+ git tag tdBank24-v1.0.2
+
+
+
+git config --global user.name "mylandmarkTech"
+git config --global user.email "mylandmarktech@gmail.com"
+
+
+git clone https://github.com/Landmark-Fintech/td
+
+
+
+===============================
+
+Make sure that your working tree is clean 
+
+Conflict = dev / stage / masteZZr  
+
+git stash       =     to take backup
+git stash  list
+
+   
+  
+  commit 
+
+stash@{0}
+stash@{1}
+
+git stash apply            = resume wip for the most recent backup
+git stash apply stash@{0}  = resume wip for the 1st backup
+git stash apply stash@{5}  = resume wip for 6th backup
+git stash drop stash@{0}   = will delete backup
+git stash pop stash@{1}    =It apply & drop backup 1.
+git stash pop
+# git 
+
+git merge stage  = all changes
+
+git cherry-pick 0aa9b586ed   #
+  It is use choose a specific commit from one 
+  branch and  apply it onto another
+
+stage --> dc1 --> dc2 --> dc10
+   
+master
+  git merge stage 
+
+  git cherry-pick
+
+  git rebase 
+
+  git branch uat
+  git checkout uat  
+
+  git checkout -b bugfix 
+
+
+https://github.com/mylandmarktechs/ebay.git
+
+https://github.com/mylandmarktech-ebay/ebay.git
+
+git clone
+    push
+    pull -- move changes from RemoteRepo to working area
+    fetch -- move changes from RemoteRepo to LocalRepo
+             git merge - to move from localRepo to wa 
+
+
+
+
+developer Sam
+
+git push origin master
+
+Manage access
+
+git fetch
+
+IQ: when should I used fetch, clone and pull ?
+
+git clone https://github.com/myLandmark-Technology/td
+
+  dev1---dev10 
+
+
+  Username
+  Password  
+
+git remote add ba https://github.com/myLandmark-Technology/ba.git
+git remote add bas git@github.com:myLandmark-Technology/ba.git
+
+SSH-KEYS: 
+
+  ssh-private-key (.pem)
+
+ssh-keygen 
+
+ls ~/.ssh/
+cat ~/.ssh/id_rsa.pub 
+
+rm -rf ~/.ssh 
+
+ssh -T git@github.com
+
+ssh-keygen 
+ssh-keygen -t dsa
+ls -la ~/.ssh  
+    id_rsa         private
+    id_rsa.pub     public
+    known_hosts    hosts validated credentials
+    
+ssh uses RSA encryption  algorithm by default.
+
+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
+
+   
+
+PAT
+   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
+    It is use to access and/or manage the GitHub-API resources
+    Use to control access 
+    use to access GitHub account instead of password
+We can generate multiple PAT with different level of access    
+
+git commit --amend -m "an updated commit message" : 
+   Change most recent Git commit message.
+
+git log --author="Simon Legah"
+
+IQ: What is the difference b/w git commit and git rebase
+
+GIT = DVCS 
+          V1      V2
+master -->mc1 -->mc2-->
+                      |
+                      |              v3    v4    v5 = 3
+                      > development dc1-->dc2-->dc3
+
+git merge master:# dc1-->dc2-->dc3 = dc1 (v6)
+                   v1 + v2 + v6
+
+git rebase : dc1-->dc2-->dc3
+
+Best Branching Strategy:
+    development
+
+    stage
+
+    master -  
+        bugfix_bugName
+        feature
+There's no specifc strategy
+
+ookGithub-webhook
+
+Git Best Practices:
+    Use branching strategy and pull requests
+    Commit once you finish the task. 
+    Avoid merge Conflicts.
+    Don’t Commit Half-Done - git stash
+    Test your code before commit.
+    Write Good Commit Messages before committing 
+    Try to use git commands rather than GUI tools.
+    use ssh url and PAT over https 
+    use rebase over git merge
+
+=====================================================   
+HTTP Status Codes:
+  http://44.192.81.238:8081/#browse/browse:boa-release
+    GET | PUT | DELETE 
+1×× Informational
+    100 Continue
+    101 Switching Protocols
+    102 Processing
+2×× Success
+    200 OK
+    201 Created
+    202 Accepted
+3×× Redirection
+    300 Multiple Choices
+    301 Moved Permanently
+    302 Found
+    303 See Other
+4×× Client Error
+    400 Bad Request
+    401 Unauthorized
+    402 Payment Required
+    403 Forbidden
+    404 Not Found
+    405 Method Not Allowed
+    406 Not Acceptable
+5×× Server Error
+    500 Internal Server Error
+    501 Not Implemented
+    502 Bad Gateway
+    503 Service Unavailable
+    504 Gateway Timeout
+https://httpstatuses.com/  
+  
+  
+Manage access
+
+abe4c5c017fc1520eb4beabd5b7fc633317cd085
+
+
+ROLES: 
+    DevOps Engineer 
+    Cloud Engineer
+    Platform Engineer
+    SRE
+    CKA || SCM 
+    AWS Solution Architect || 
+    Cloud Engineer | | BSc. ||
+    Linux - RHEL,  UBUNTU, CENTOS
+
+LANDGUAGES:
+   •  Bash Shell, Powershell, 
+        yaml, Json, Golang and Groovy.  
+  AWS 
+
+ACHIEVING ZERO DOWNTIME:
+    1. Attend your classes
+    2A. Revise videos and notes before the next class 
+    2. Consistently dedicated 6+ hours for daily studies
+    3. Raise ticket of issues and share in the help desk.
+    4. Be quick to help others reslove issues/tickets - 
+    
+***##########*********
+    HRM = Therma       
+***############****
+18.214.87.30
+172.31.49.82 
+*----------*
+
+Python
